@@ -363,7 +363,14 @@ nav.homepage{
   footer {
       background-color: #1a1a1a;
   }
+  .homepage a {
+    color: #ffffff;
+  }
+  nav.homepage{
+    background-color: #000000;
+  }
 }
+
 
 
 
