@@ -1,5 +1,24 @@
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
 
+body {
+  animation: fadeIn 0.8s ease-in-out; /* Smooth fade-in on page load */
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+  /* Disable animations for users who prefer reduced motion */
   * {
+      animation: none !important;
+      transition: none !important;
+  }
+}
+ * {
     font-family: "Cabin", sans-serif;
     
   }
@@ -13,7 +32,7 @@
   }
   
   a:focus, a:hover {
-    outline: 2px solid #0056b3;
+    
     text-decoration: underline;
   }
   
@@ -25,7 +44,14 @@
     padding: 10px;
     
     
+} 
+ul li a:focus, nav ul li a:hover {
+  
+  outline: none;
+  transition: background-color 0.3s ease; /* Transition for background color change */
+  
 }
+
 
 nav ul {
     flex-direction: column;
@@ -44,10 +70,8 @@ nav ul li {
     margin: 4px 15px;
 }
   
-  nav ul li a:focus, nav ul li a:hover {
-    background-color: #0056b3;
-    outline: none;
-  }
+ 
+ 
   
   section {
     margin-bottom: 3rem;
@@ -240,13 +264,13 @@ section#gallery {
 }
 
 #gallery h2{
-  font-size: 2rem;
+  font-size: 1.4rem;
     margin-bottom: 10px;
     grid-column: 1 / -1;
     position: sticky;
     top: 0;
     background-color: white;
-    padding-bottom: 20px;
+    padding: 0 0 20px;
 }
 #gallery::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
@@ -289,6 +313,57 @@ nav.homepage{
   color: #333;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+      background-color: #121212; /* Dark background */
+      color: #e0e0e0;
+  }
+
+  
+
+  h2 {
+      background-color: #121212; /* Dark background */
+      color: #f0f0f0;
+  }
+  header h2 {
+    font-size: 1.2rem;
+    background-color: #0056b3;
+}
+  th {
+    background-color: #103f73;
+    color: white;
+  }
+
+  div.athlete {
+    background-color: rgba(48, 55, 61, 1);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+  tr:nth-child(even) {
+    background-color: rgba(48, 55, 61, 1);
+  }
+  #gallery h2{
+    background-color: #121212;
+    padding: 0 0 20px;
+  }
+  .homepage ul li {
+      background-color: #2a2a2a; /* Dark mode card background */
+      color: #e0e0e0;
+      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3); /* Darker shadow */
+  }
+
+  nav {
+      background-color: #1a1a1a; /* Dark mode navigation background */
+  }
+
+  footer {
+      background-color: #1a1a1a;
+  }
+}
 
 
 
