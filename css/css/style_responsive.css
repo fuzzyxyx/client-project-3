@@ -1,0 +1,322 @@
+
+* {
+    font-family: "Cabin", sans-serif;
+    
+  }
+    a {
+    color: #ffffffcc;
+    text-decoration: none;
+  }
+
+  #meetlink {
+    color: #f2f2f2;
+  }
+  
+  a:focus, a:hover {
+    outline: 2px solid #0056b3;
+    text-decoration: underline;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+    
+    
+}
+
+nav ul {
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    align-items: center;
+}
+
+
+
+nav ul li {
+    margin: 4px 15px;
+}
+  
+  nav ul li a:focus, nav ul li a:hover {
+    background-color: #0056b3;
+    outline: none;
+  }
+  
+  section {
+    margin-bottom: 3rem;
+    
+  }
+
+  header {
+    padding: 20px;
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
+  }
+  
+  header h2 {
+    font-size: 1.2rem;
+  }
+
+  #date {
+    color: #ccc;
+  }
+  
+  /* Main content */
+  main {
+    padding: 20px;
+    
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    grid-column: 1 / -1;
+  }
+  
+  p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #007BFF;
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  figcaption {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  footer a:focus, footer a:hover {
+    outline: 2px solid #0056b3;
+    text-decoration: underline;
+  }
+  
+  footer address {
+    font-style: normal;
+  }
+  
+  /* Accessibility enhancements */
+  :focus {
+    outline: 3px solid #0056b3;
+  }
+  
+  [type="skip-link"] {
+    background: #000000;
+    color: #ffffff;
+    padding: 8px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    transition: transform 0.3s;
+    z-index: 1000; /* Ensures it's above other elements */
+    text-align: center;
+    font-size: 14px; /* Optional, adjust for readability */
+  }
+
+  [type="skip-link"]:focus {
+     transform: translate(-50%, 0); /* Moves the link into view */
+    outline: 2px solid #ffffff;
+  }
+
+  
+  .skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+  }
+
+ /* General styles for athlete section */
+#individual-results{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between cards */
+  padding: 0px; /* Padding around the grid */
+}
+
+div.athlete {
+  background-color: white; /* Card background */
+  border: 1px solid #ddd; /* Border for the card */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: hidden; /* Ensure child elements don't overflow */
+  transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.athlete:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.athlete img {
+  width: 100%; /* Responsive image */
+  height: 270px; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the entire card */
+}
+
+.athlete dl {
+  padding: 15px; /* Padding inside the card */
+}
+
+.athlete dt {
+  font-weight: bold; /* Bold labels */
+}
+
+.athlete dd {
+  margin: 0 0 10px; /* Spacing between items */
+}
+
+
+
+section#gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between cards */
+  padding: 0px; /* Padding around the grid */
+  overflow-y: auto; /* Make the section scrollable vertically */
+  max-height: 70vh; /* Limit the height of the gallery section */
+  
+}
+
+#gallery:focus {
+  outline: 2px solid blue; /* Highlight focus with a blue outline */
+}
+
+#gallery h2{
+  font-size: 2rem;
+    margin-bottom: 10px;
+    grid-column: 1 / -1;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding-bottom: 20px;
+}
+#gallery::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+footer a {
+  color: aqua;
+}
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+
+ 
+  /* Media Queries for larger screens */
+  @media (min-width: 768px) {
+    nav{
+      display: flex;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100; 
+    }
+    
+
+
+    nav ul {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li:first-child {
+      margin-right: auto;
+  }
+  
+    header {
+      text-align: left;
+    }
+  
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    h2 {
+      font-size: 2rem;
+    }
+  
+    p, table {
+      font-size: 1.2rem;
+    }
+  
+    footer {
+      text-align: left;
+    }
+    #gallery {
+      flex-wrap: wrap; /* Allow images to wrap in smaller screens */
+        justify-content: center; /* Center images */
+  }
+
+    #gallery img {
+      width:100%; /* Adjust image width for smaller screens */
+  }
+  }
+  
